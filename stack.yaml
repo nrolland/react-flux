@@ -1,3 +1,22 @@
 resolver: lts-3.0
+extra-deps:
+  - web-routes-0.27.9
+  - blaze-builder-0.4.0.1
+  - exceptions-0.8.0.2
+  - http-types-0.8.6
+  - parsec-3.1.9
+  - split-0.2.2
+  - utf8-string-1.0.1.1
+  - transformers-compat-0.4.0.4
+
+
 packages:
 - '.'
+
+compiler-check: match-exact
+setup-info:
+ ghcjs:
+  source:
+   ghcjs-0.2.0.20151029_ghc-7.10.2:
+    url: "https://github.com/nrolland/ghcjs/releases/download/v0.2.0.20151029/ghcjs-0.2.0.20151029.tar.gz"
+

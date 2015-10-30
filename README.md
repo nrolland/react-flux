@@ -20,6 +20,25 @@ cabal configure
 cabal build
 ~~~
 
+## Building with stack
+
+to compile with ghc
+
+~~~
+stack build
+~~~
+
+to compile with ghcjs, install ghcjs
+~~~
+stack setup --compiler ghcjs-0.2.0.20151029_ghc-7.10.2
+~~~
+
+then build 
+~~~
+stack build --flag react-flux:example --compiler ghcjs-0.2.0.20151029_ghc-7.10.2
+~~~
+
+
 # Example Applications
 
 The source contains some [example applications](https://bitbucket.org/wuzzeb/react-flux/src/tip/example).
