@@ -95,8 +95,13 @@ library
 executable todo
    if !flag(example)
         Buildable: False
-   ghc-options: -Wall
+   ghc-options: -Wall  -fdefer-type-errors
    cpp-options: -DGHCJS_BROWSER
+
+   other-modules:    TodoComponents
+                     TodoDispatcher
+                     TodoStore
+                     TodoViews
 
    default-language: Haskell2010
    hs-source-dirs: example/todo
@@ -108,7 +113,7 @@ executable todo
 executable todo-node
    if !flag(example)
         Buildable: False
-   ghc-options: -Wall
+   ghc-options: -Wall  -fdefer-type-errors
 
    default-language: Haskell2010
    hs-source-dirs: example/todo
